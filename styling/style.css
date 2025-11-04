@@ -1,0 +1,314 @@
+/* GENERAL BODY STYLES */
+body, html {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    padding: 0;
+    background-color: black;
+}
+
+/* NAV-BAR */
+.navigation-bar {
+    align-items: center;
+    position: fixed; /* fixed position - always stays same place */
+    top: 0px; 
+    left: 0; 
+    width: 100%; 
+    background-color: #000; 
+    padding: 20px 0px; 
+    z-index: 100; 
+    border-bottom: 2px solid #525252;
+}
+
+.navigation-bar p {
+    padding-left: 100px;
+    color:#525252;
+    font-size: 25px;
+    transition: 0.4s ease-out;
+}
+
+.navigation-bar p:hover{
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    color: white;
+}
+
+
+#batman-logo {
+    background: url('../images/batman-logo.png') no-repeat center;
+    background-size: cover; 
+    width: 120px; 
+    top: 35.5px;
+    height: 100px; 
+    position: absolute; /* stays on position specified */
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 200; 
+
+}
+
+/* NAVBAR MENU */
+.navigation-bar .menu {
+    position: relative;
+    color: #525252;
+    font-size: 25px;
+    padding-left: 100px;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+/* TURNS MENU TEXT WHITE */
+.navigation-bar .menu:hover {
+    color: white;
+}
+/* NAVBAR DROPDOWN */
+.navigation-bar .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111;
+    border: 1px solid #444;
+    padding: 10px 0;
+    width: 200px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease; /*the transition eases the height and opacity of the dropdown menu */
+    transform: translateY(-20px); /* the height after it drops down, does it drop down Y-axis or X-axis? */
+    z-index: 150;
+}
+
+/* when hover, show */
+.navigation-bar .menu:hover .dropdown {
+    opacity: 1;
+    max-height: 300px;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* the colors for dropdown links */
+.navigation-bar .dropdown a {
+    display: block;
+    color: #aaa;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/* when you hover over the dropdown links, put color */
+.navigation-bar .dropdown a:hover {
+    color: white;
+}
+
+/* BACKGROUND IMAGE 1 */
+#background-main_page {
+    background: url('../images_2/Gemini_Generated_Image_88hqkv88hqkv88hq.png') no-repeat center;
+    background-size: fill;
+    height: 100vh;
+    width: 100%;
+    position: absolute; 
+    overflow: none;
+    transform: scale(1.2); /* zoom in */
+    top: 0;
+    left: 0;
+    opacity: 100%;
+}
+
+/* MAIN PAGE CONTAINER */
+.container-main_page {
+    background-color: #000;
+    position:relative;
+    height: 100vh; 
+    width: 100%;
+    overflow: hidden; 
+}
+
+/* OVERLAY CONTENT (TEXT) */
+.content-overlay-text {
+    position: absolute;
+    top: 16.5%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* left right, top bottom*/
+    color: white; 
+    text-align: center; 
+    z-index: 3; 
+}
+
+h1 {
+    font-size: 165px;
+    margin-bottom: 20px;
+    opacity: 25%;
+    font-weight: 200;
+}
+
+#content-overlay-button {
+    position: absolute; 
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    border: 2px solid white;
+    padding: 10px;
+    transition: 0.2s ease-out;
+    width: fit-content; 
+    display: flex;
+    justify-content: center;
+}
+
+#button_discover {
+    align-items: end;
+    justify-content: end;
+    font-size: 40px;
+}
+
+#button_discover a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    transition: 0.3s ease-out;
+}
+#button_discover a:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#latest_news {
+    margin-top: 20rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#latest_news h1 {
+    color: white;
+    margin: 15px 0; 
+    padding: 10px;
+    opacity: 70%;
+    font-size: 5rem;
+}
+
+#background_latest_news {
+    opacity: 62%;
+    background: url('../images_2/VESPERA_CAR_RAIN_OUT.png') no-repeat center center;
+    background-size: fill;
+    width: 100%;
+    height:600px;
+}
+
+#content-overlay-text-ln {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); /* left right, top bottom*/
+    color: white; 
+    font-size: 5rem;
+    text-align: center; 
+    z-index: 3; 
+}
+
+#content-overlay-button-ln {
+    position: absolute; 
+    margin-top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    border: 3.5px solid white;
+    box-shadow: inset 0 0 50px black ;
+    padding: 5px 50px;
+    transition: 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+}
+
+#the_vault_mp {
+    margin-top: 20rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding: 60px;
+}
+
+#the_vault_mp h1 {
+    margin: 0;
+    opacity: 100%;
+    font-size: 5rem;
+    color: white;
+}
+
+#the_vault_mp h1:nth-of-type(1){
+    padding: 0;
+}
+#the_vault_mp h1:nth-of-type(2){
+    padding: 0;
+    opacity: 50%;
+}
+
+#background_the_vault {
+    opacity: 62%;
+    background: url('../images_2/VESPERA_CAR_HQ_FRONT.png') no-repeat center center;
+    background-size: cover;
+    width: 1000px;
+    height:700px;
+}
+
+#content-overlay-button-tvmp {
+    margin-bottom: 15rem;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    border: 3.5px solid white;
+    box-shadow: inset 0 0 50px rgb(103, 93, 93) ;
+    padding: 5px 50px;
+    transition: 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+}
+
+#the_vault_mp_images {
+    display: flex;
+    gap: 20px;
+    padding: 3rem;
+    justify-content: space-between;
+}
+
+#the_vault_mp_images #img1{
+    height: 700px;
+    background: url('../images_2/VESPERA_CAR_ENGINE_LOOK.png');
+}
+#the_vault_mp_images #img2 {
+    margin-top: 1.5rem;
+    height: 700px;
+    background: url('../images_2/VESPERA_CAR_TAILLIGHTS_LOOK.png');
+    width: 650px;
+}
+
+#the_vault_mp_images {
+  display: flex;
+  gap: 30px;
+  padding: 100px;
+  justify-content: center;
+}
+
+.zoom-img {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1); /* ensure initial scale */
+}

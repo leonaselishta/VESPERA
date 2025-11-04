@@ -1,0 +1,500 @@
+/* GENERAL BODY STYLES */
+body, html {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+     scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* NAV-BAR */
+.navigation-bar {
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+    z-index: 100;
+    border-bottom: 2px solid #525252;
+}
+
+.navigation-bar p {
+    padding-left: 100px;
+    color: #525252;
+    font-size: 25px;
+    transition: 0.4s ease-out;
+}
+
+.navigation-bar p:hover {
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    color: white;
+}
+
+#batman-logo {
+    background: url('../images/batman-logo.png') no-repeat center;
+    background-size: cover;
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    top: 35.5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+.navigation-bar .menu {
+    position: relative;
+    display: inline-block;
+    color: #525252;
+    font-size: 25px;
+    padding-left: 100px;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.navigation-bar .menu:hover {
+    color: white;
+}
+
+.navigation-bar .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111;
+    border: 1px solid #444;
+    padding: 10px 0;
+    width: 200px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+    transform: translateY(-20px);
+    z-index: 150;
+}
+
+.navigation-bar .menu:hover .dropdown {
+    opacity: 1;
+    max-height: 300px;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.navigation-bar .dropdown a {
+    display: block;
+    color: #aaa;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation-bar .dropdown a:hover {
+    color: white;
+}
+
+/* BACKGROUND IMAGE 1 */
+#background-main_page {
+    background: url('../images_2/VESPERA_CAR_PHANTOM_FRONT.png') no-repeat center;
+    background-size: fill;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    transform: scale(1.3);
+    top: 0;
+    left: 0;
+    opacity: 0.45;
+}
+
+/* MAIN PAGE CONTAINER */
+.container-main_page {
+    background-color: #000;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* OVERLAY CONTENT (TEXT) */
+.content-overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+h1 {
+    font-size: 250px;
+    opacity: 1;
+    font-weight: 200;
+}
+
+#the-phantasm {
+    filter: drop-shadow(0px 0px 5px #1b1b1b);
+}
+
+#bold-relentless {
+    color: #ffffff;
+    opacity: 0.65;
+    position: absolute;
+    font-size: 2rem;
+    top: 30%;
+    justify-content: center;
+}
+
+#distinctly_phantasm {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+#distinctly_phantasm h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    margin-left: 5rem;
+    color: white;
+    text-decoration: none;
+}
+
+#distinctly_phantasm h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-left: 10rem;
+    color: white;
+}
+
+#distinctly_phantasm_bg {
+    background: url('../images_2/VESPERA_CAR_PHANTOM_SIDE.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    margin-top: 0px;
+    height: 750px;
+    margin-bottom: 10rem;
+}
+
+#silhouette {
+    display: grid;
+    place-items: center;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 30rem;
+}
+
+#silhouette h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.5rem;
+}
+
+#silhouette_img {
+    background: url('../images_2/VESPERA_CAR_HQ_ONFIRE.png') no-repeat center center;
+    background-size: cover;
+    width: 70rem;
+    height: 45rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#phantasm_form h1 {
+    margin-bottom: 0;
+    margin-top: 35rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#phantasm_form_imgs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+#phantasm_form_imgs > div {
+    width: 900px;
+    height: 35rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#phantasm_form_imgs #img1 { background-image: url('../images_2/VESPERA_CAR_CLOSEUP_HEADLIGHT.png');}
+#phantasm_form_imgs #img2 { background-image: url('../images_2/VESPERA_CAR_CLOSEUP_TAILLIGHT.png');}
+#phantasm_form_imgs #img3 { background-image: url('../images_2/VESPERA_CAR_CLOSEUP_SIDEMIRROR.png'); }
+#phantasm_form_imgs #img4 { background-image: url('../images_2/VESPERA_CAR_CLOSEUP_WHEEL.png');}
+
+#chassis {
+  margin: 0;
+  padding: 0;
+}
+
+#chassis h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+#chassis h1 span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+#chassis_imgs {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 7rem;
+}
+
+#chassis_imgs > div {
+  height: 500px;
+  width: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#chassis_imgs #img1-chassis { background-image: url('../images_2/VESPERA_CAR_CHASSIS_1.png'); }
+#chassis_imgs #img2-chassis { background-image: url('../images_2/VESPERA_CAR_CHASSIS_2.png'); }
+
+#fire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fire h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#fire #img1,
+#fire #img2 {
+    height: 700px;
+    background-size: cover;
+    padding: 0;
+    margin : 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fire #img1 {
+    margin-top: 10rem;
+    width: 50rem;
+    background-image: url('../images_2/VESPERA_CAR_SHOOTING_FLAMES_1.png');
+}
+
+#fire #img2 {
+    width: 80rem;
+    background-image: url('../images/b17082424cce2fa22a522664fc598734.jpg');
+    margin-bottom: 0;
+}
+
+#batman_svj_shadows {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 8.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main_bg_batman {
+    position: absolute;
+    top: 0;
+    
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../images/batman-svj.png') no-repeat center center;
+    z-index: 1;
+    filter: brightness(0.4);
+    
+}
+
+#overlay_txt_batman h1 {
+    margin: 0;
+    top: 30rem;
+    text-align: center;
+    position: relative;
+    font-size: 1rem;
+    z-index: 4;
+}
+
+#overlay_txt_batman h1:nth-of-type(1) {
+    font-size: 3.5rem;
+    color: white;
+}
+
+#overlay_txt_batman h1:nth-of-type(2) {
+    color: transparent;
+    font-size: 1.6rem;
+    text-shadow: 0 0 2.7px rgba(187, 183, 183, 0.7);
+}
+
+#numbers_vanish {
+    position: relative;
+    height: 100vh;
+}
+
+#numbers_vanish h1 {
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+#lambo_svj_numbers {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70rem;
+    opacity: 80%;
+    width: 100rem;
+    background: url('../images_2/VESPERA_CAR_SHOOTING_FLAMES_2_SKY.png') no-repeat center center;
+    background-size: contain;
+}
+
+#interior h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#interior_imgs {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 5px;
+}
+
+#interior_imgs #img1,
+#interior_imgs #img2 {
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#interior_imgs #img1 {
+    height: 900px;
+    background-image: url('../images_2/VESPERA_CAR_INTERIOR_1.png');
+}
+
+#interior_imgs #img2 {
+    height: 650px;
+    background-image: url('../images_2/VESPERA_CAR_STEERING_WHEEL.png');
+}
+
+#new_chapter {
+    margin-top: 5rem;
+    position: relative;
+    height: 100vh;
+}
+
+#new_chapter h1 {
+    top: 25%;
+    margin: 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+#background_new_chapter {
+    background: url('../images_2/VESPERA_CAR_WOLF_LOOK.png') no-repeat center center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+#discovermore-wp {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#discovermore-wp h1 {
+    color: white;
+    margin: 15px 0; 
+    padding: 10px;
+    opacity: 70%;
+    font-size: 5rem;
+}
+
+#background_discovermore-wp {
+    opacity: 62%;
+    background: url('../images/maxresdefault.jpg') no-repeat center center;
+    background-size: fill;
+    width: 100%;
+    height:600px;
+    margin-bottom: 5rem;
+}
+
+#content-overlay-text-wp {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); /* left right, top bottom*/
+    color: white; 
+    font-size: 5rem;
+    text-align: center; 
+    z-index: 3; 
+}
+
+#content-overlay-button-wp {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    border: 3.5px solid white;
+    box-shadow: inset 0 0 50px black ;
+    padding: 2.5px 100px;
+    transition: 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+}

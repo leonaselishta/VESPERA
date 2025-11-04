@@ -1,0 +1,102 @@
+html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: black;
+            overflow: hidden; /* prevents scrolling */
+            background-color: black;
+        }
+
+        .navigation-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            padding: 5px 0;
+            z-index: 100;
+        }
+
+  #batman-logo {
+    background: url('../images/batman-logo.png') no-repeat center;
+    background-size: cover; 
+    width: 120px; 
+    top: 35.5px;
+    height: 100px; 
+    position: absolute; /* stays on position specified */
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 200; 
+
+}
+
+        #get-in-touch {
+            top: 50%;
+            left: 15%;
+            position: fixed;
+            letter-spacing: 1px;
+            line-height: 12.5rem;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: left;
+            font-size: 15rem; /* Responsive font size */
+        }
+
+        .line {
+            letter-spacing: 3px;
+            margin: 0;
+            padding: 0;
+        }
+
+    form {
+    position: fixed;
+    top: 50%;
+    right: 5rem;
+    transform: translateY(-50%);
+    text-align: right;
+    color: rgba(255, 255, 255, 0.365);
+    font-size: 2.5rem;
+    line-height: 4rem;
+}
+
+
+form input {
+    background-color: black;
+}
+
+form input:focus{
+    text-decoration: none;
+}
+
+
+.custom-input{
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(99, 99, 99);
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    border-bottom: 0;
+    border-bottom: 2px solid rgb(34, 34, 34);
+    
+}
+
+.custom-input:focus {
+    outline: none;
+    border-left-color: white;
+}
+
+.submit input[type="submit"] {
+    font-family:"Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    opacity: 50%;
+    margin-right: 8.5rem;
+    color: white;
+    background-color: #222;
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}

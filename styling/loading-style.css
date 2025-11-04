@@ -1,0 +1,31 @@
+body {
+            background-color: black;
+            margin: 0;
+            justify-content: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        #batman-logo {
+            width: 200px; 
+            height: 200px; 
+            background: url(../images/batman-logo.png) no-repeat center center;
+            background-size: contain;
+            animation: jump 1s ease-in-out infinite;
+        }
+
+        /* animation for jump */
+        @keyframes jump {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(-50px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
